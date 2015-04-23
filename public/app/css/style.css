@@ -1,0 +1,218 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+}
+#app {
+	height: 100%;
+}
+#app:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.col-left, .col-center, .col-right {
+	height: 100%;
+}
+.col-left {
+	float: left;
+	width: 200px;
+	height: 100%;
+	background: darkseagreen;
+}
+.col-right {
+	float: right;
+	width: 20%;
+	background: firebrick;
+}
+
+.button {
+	margin: 10px 10px 10px 0;
+}
+
+.overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.3);
+}
+.overlay.visible {
+	display: block;
+}
+.loading {
+	width: 100px;
+	height: 100px;
+	background: #ffffff;
+	border-radius: 10px;
+	position: absolute;
+	left: 50%;
+	margin-left: -50px;
+	top: 50%;
+	margin-top: -50px;
+}
+.spinner {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	margin: 10px auto 0;
+}
+.spinner div {
+	width: 5px;
+	height: 15px;
+	background: black;
+	position: absolute;
+	top: 17px;
+	left: 22px;
+	opacity: 0.05;
+
+	-webkit-animation: fadeit 1.1s linear infinite;
+	animation: fadeit 1.1s linear infinite;
+}
+.spinner div:nth-child(1){
+	-webkit-transform: rotate(0deg) translate(0, -15px);
+	transform: rotate(0deg) translate(0, -15px);
+
+	-webkit-animation-delay:0.39s;
+	animation-delay:0.39s;
+}
+.spinner div:nth-child(2){
+	-webkit-transform: rotate(45deg) translate(0, -15px);
+	transform: rotate(45deg) translate(0, -15px);
+
+	-webkit-animation-delay:0.52s;
+	animation-delay:0.52s;
+}
+.spinner div:nth-child(3){
+	-webkit-transform: rotate(90deg) translate(0, -15px);
+	transform: rotate(90deg) translate(0, -15px);
+
+	-webkit-animation-delay:0.65s;
+	animation-delay:0.65s;
+}
+.spinner div:nth-child(4){
+	-webkit-transform: rotate(135deg) translate(0, -15px);
+	transform: rotate(135deg) translate(0, -15px);
+
+	-webkit-animation-delay:0.78s;
+	animation-delay:0.78s;
+}
+.spinner div:nth-child(5){
+	-webkit-transform: rotate(180deg) translate(0, -15px);
+	transform: rotate(180deg) translate(0, -15px);
+
+	-webkit-animation-delay:0.91s;
+	animation-delay:0.91s;
+}
+.spinner div:nth-child(6){
+	-webkit-transform: rotate(225deg) translate(0, -15px);
+	transform: rotate(225deg) translate(0, -15px);
+
+	-webkit-animation-delay:1.04s;
+	animation-delay:1.04s;
+}
+.spinner div:nth-child(7){
+	-webkit-transform: rotate(270deg) translate(0, -15px);
+	transform: rotate(270deg) translate(0, -15px);
+
+	-webkit-animation-delay:1.17s;
+	animation-delay:1.17s;
+}
+.spinner div:nth-child(8){
+	-webkit-transform: rotate(315deg) translate(0, -15px);
+	transform: rotate(315deg) translate(0, -15px);
+
+	-webkit-animation-delay:1.3s;
+	animation-delay:1.3s;
+}
+@-webkit-keyframes fadeit{
+	0%{ opacity:1; }
+	100%{ opacity:0;}
+}
+@keyframes fadeit{
+	0%{ opacity:1; }
+	100%{ opacity:0;}
+}
+.progress {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 20px;
+}
+.progress:after {
+	display: inline;
+	content: '%';
+}
+
+.nav {
+	border-bottom: 1px solid #ddd;
+}
+.nav > li {
+	display: inline-block;
+	background: #fff;
+	padding: 10px 10px 0 10px;
+	margin-bottom: -1px;
+}
+.nav > li.active {
+	border: 1px solid #ddd;
+	border-bottom-color: transparent;
+	border-radius: 5px 5px 0 0;
+}
+.nav > li > a {
+	text-decoration: none;
+}
+.fares > li {
+	margin-top: 10px;
+}
