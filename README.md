@@ -29,6 +29,6 @@ npm start
 ``` bash
 npm run build
 ```
-Далее можно просто открыть в браузере файлы *public/index.dev.html* или *public/index.html*, для разработки и production среды соответственно.
+Далее можно просто открыть в браузере файлы *index.dev.html* или *index.html*, для разработки и production среды соответственно.
 
-Также доступна [рабочая демонстрация](http://olegman.github.io/anywayanyday-test-task/public/) проекта.
+Также доступна [рабочая демонстрация](http://olegman.github.io/anywayanyday-test-task/) проекта.
