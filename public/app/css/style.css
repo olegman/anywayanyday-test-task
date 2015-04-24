@@ -54,6 +54,7 @@ body {
 	height: 100%;
 }
 #app {
+	display: flex;
 	height: 100%;
 }
 #app:after {
@@ -67,18 +68,17 @@ body {
 	box-sizing: border-box;
 }
 .col-left {
-	float: left;
 	width: 200px;
 	height: 100%;
 	background: darkseagreen;
 }
 .col-center {
-	margin-left: 200px;
-	margin-right: 20%;
+	flex-grow: 2;
+  	order: 1;
 	padding: 10px;
 }
 .col-right {
-	float: right;
+	order: 2;
 	width: 20%;
 	background: firebrick;
 }
