@@ -64,12 +64,18 @@ body {
 
 .col-left, .col-center, .col-right {
 	height: 100%;
+	box-sizing: border-box;
 }
 .col-left {
 	float: left;
 	width: 200px;
 	height: 100%;
 	background: darkseagreen;
+}
+.col-center {
+	margin-left: 200px;
+	margin-right: 20%;
+	padding: 10px;
 }
 .col-right {
 	float: right;
