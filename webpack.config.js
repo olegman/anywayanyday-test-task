@@ -22,10 +22,16 @@ module.exports = {
 		extensions: ['', '.js', '.jsx']
     },
     output: {
+		libraryTarget: 'var',
+		library: 'App',
     	path: __dirname + '/public/build',
     	publicPath: __dirname + '/public',
-    	filename: 'app.js'
+    	filename: prod ? 'app.min.js' : 'app.js'
     },
+	externals: {
+		jquery: 'jQuery',
+		react: 'React'
+	},
 	module: {
 		loaders: [
 			{
