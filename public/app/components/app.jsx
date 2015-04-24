@@ -7,13 +7,13 @@ let App = React.createClass({
     render() {
         return (
             <div id="app">
-                <div className="col-right"></div>
                 <div className="col-left"></div>
                 <div className="col-center">
                     <Search />
                     <Flights />
                     <Overlay />
                 </div>
+                <div className="col-right"></div>
             </div>
         );
     }
