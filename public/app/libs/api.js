@@ -1,5 +1,6 @@
 import ServerActions from 'actions/server';
 import $ from 'jquery';
+import Helper from 'libs/helper';
 
 class Api {
     constructor() {
@@ -16,7 +17,7 @@ class Api {
             $.ajax({
                 url: 'http://api.anywayanyday.com/api/NewRequest3/',
                 data: {
-                    Route: '2304MOWLEDAD1CN0IN0SCE',
+                    Route: `${Helper.getTodayDate() + Helper.getTodayMonth()}MOWLEDAD1CN0IN0SCE`,
                     _Serialize: 'JSON'
                 },
                 success: function(response) {

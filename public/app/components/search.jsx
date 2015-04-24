@@ -1,6 +1,7 @@
 import React from 'react';
 import ViewActions from 'actions/view';
 import SearchStore from 'stores/search';
+import Helper from 'libs/helper';
 
 let Search = React.createClass({
     getInitialState() {
@@ -26,8 +27,11 @@ let Search = React.createClass({
         return (
             <div className="search">
                 <button className="button" onClick={this.startSearch}>Искать</button>
-                <label htmlFor="fuu">Автообновление</label>
-                <input onChange={this.toggleAutoupdate} checked={this.state.autoupdate} id="fuu" type="checkbox" />
+                <span>{`рейсы по маршруту Москва — Санкт-Петербург, на сегодняшнее число (${Helper.getTodayDate()}.${Helper.getTodayMonth()})`}</span>
+                <div>
+                    <label htmlFor="fuu">Автообновление</label>
+                    <input onChange={this.toggleAutoupdate} checked={this.state.autoupdate} id="fuu" type="checkbox" />
+                </div>
             </div>
         );
     }
