@@ -15,17 +15,17 @@ if (prod) {
 }
 
 module.exports = {
-	context: __dirname + '/public/app',
+	context: __dirname + '/app',
 	entry:  './bootstrap',
     resolve: {
-		root: __dirname + '/public/app',
+		root: __dirname + '/app',
 		extensions: ['', '.js', '.jsx']
     },
     output: {
 		libraryTarget: 'var',
 		library: 'App',
-    	path: __dirname + '/public/build',
-    	publicPath: __dirname + '/public',
+    	path: __dirname + '/build',
+    	publicPath: __dirname,
     	filename: prod ? 'app.min.js' : 'app.js'
     },
 	externals: {
@@ -36,7 +36,7 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.jsx$|\.js?$/,
-				include: __dirname + '/public/app',
+				include: __dirname + '/app',
 				loader: 'babel-loader?optional=runtime'
 			}
 		]
